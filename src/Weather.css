@@ -1,0 +1,8 @@
+.Weather{
+    text-transform: uppercase;
+}
+
+.Weather li{
+    color: red;
+    
+}
