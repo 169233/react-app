@@ -1,8 +1,25 @@
-.Weather{
-    text-transform: uppercase;
+.Weather {
+  background: radial-gradient(
+    848px at 10% 20%,
+    rgba(174, 231, 165, 0.9) 0%,
+    rgb(181, 205, 154) 90%
+  );
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: solid 2px rgb(15, 85, 15);
+  border-radius: 8px;
+  text-transform: uppercase;
 }
 
-.Weather li{
-    color: red;
-    
+.Weather ul {
+  list-style: none;
+  text-align: left;
+}
+
+.Weather input {
+  margin: 10px 0;
+  border: solid 1px;
+  padding: 5px 10px;
+  text-transform: capitalize;
 }

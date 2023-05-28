@@ -1,6 +1,17 @@
 .App {
-  background: green;
-  text-align:center ;
+  text-align: center;
   display: block;
   margin: 0 auto;
+  max-width: 60%;
+}
+
+.Footer {
+  display: block;
+  margin: 0 auto;
+  max-width: 60%;
+}
+
+.Link {
+  text-decoration: none;
+  font-weight: bold;
 }
