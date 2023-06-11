@@ -34,7 +34,7 @@ export default function Weather() {
   return (
     <div className="Weather">
       <h1>Weather App</h1>;
-      <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>
         <input
           type="search"
           placeholder="Enter a city..."

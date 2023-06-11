@@ -4,10 +4,10 @@ function App() {
   return (
   <div>
       <div className="App">
-      <Weather />
+              <Weather />
     </div>
     <div className="Footer">
-        <a className="Link" href="https://github.com/169233/react-app" target="_blank" rel="noreferrer">Open source </a><span>by Jana Srahulkova</span>
+        <a className="Link" href="https://github.com/169233/react-app" target="_blank" rel="noreferrer">Open-sourced on GitHub and coded </a><span>by Jana Srahulkova</span>
       </div>
   </div>
     );
