@@ -12,6 +12,10 @@
   text-transform: uppercase;
 }
 
+.Weather h1{
+  font-weight: bold;
+}
+
 .Weather ul {
   list-style: none;
   text-align: left;

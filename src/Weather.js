@@ -40,7 +40,7 @@ export default function Weather() {
           placeholder="Enter a city..."
           onChange={updateCity}
         ></input>
-        <input type="submit" value="Search"></input>
+        <input  type="submit"  value="Search"></input>
       </form>
       <div className="List">
         <ul>
