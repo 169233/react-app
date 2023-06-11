@@ -11,9 +11,7 @@ export default function Weather() {
   let [wind, setWind] = useState("");
   let [place, setPlace] = useState("");
   let [date, setDate] = useState("");
-  
-  
- // let [icon, setIcon] = useState("");
+  let [icon, setIcon] = useState("");
 
   function showForecast(response) {
     setTemp(Math.round(response.data.main.temp));
@@ -22,7 +20,7 @@ export default function Weather() {
     setDescription(response.data.weather[0].description);
     setPlace(response.data.name)
     setDate(response.data.dt*1000)
-   // setIcon(response.data.weather[0].icon);
+    setIcon(response.data.weather[0].icon);
   }
 
   function handleSubmit(event) {
@@ -60,7 +58,8 @@ export default function Weather() {
         <div className="col-6">
           <ul>
           <li><h2>{place} {temp} ºC</h2></li>
-          <li><FormattedDate date={date} /></li></ul>
+         <li><FormattedDate date={date} /></li>
+         <img src="http://openweathermap.org/img/wn/${icon}@2x.png"/></ul>
         </div>
       <div className="List col-6">
         <ul>
