@@ -34,21 +34,32 @@ export default function Weather() {
   return (
     <div className="Weather">
       <h1>Weather App</h1>;
-            <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit}>
+      <div className="row">
+      <div className="col-9">
         <input
           type="search"
           placeholder="Enter a city..."
           onChange={updateCity}
         ></input>
-        <input  type="submit"  value="Search"></input>
+        </div>
+        <div className="col-3">
+        <input  type="submit" className="btn btn-primary"  value="Search"></input>
+      </div>
+      </div>
       </form>
-      <div className="List">
+      <div className="row">
+        <div className="col-6">
+          <ul>
+          <h2>London {temp} ºC</h2></ul>
+        </div>
+      <div className="List col-6">
         <ul>
-          <li>Temperature: {temp} ºC</li>
           <li>Description: {description}</li>
           <li>Humidity: {humidity} %</li>
           <li>Wind: {wind} km/h</li>
         </ul>
+        </div>
       </div>
     </div>
   );

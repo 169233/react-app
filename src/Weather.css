@@ -12,18 +12,11 @@
   text-transform: uppercase;
 }
 
-.Weather h1{
+.Weather h1 h2 {
   font-weight: bold;
 }
 
 .Weather ul {
   list-style: none;
   text-align: left;
-}
-
-.Weather input {
-  margin: 10px 0;
-  border: solid 1px;
-  padding: 5px 10px;
-  text-transform: capitalize;
 }
