@@ -36,15 +36,16 @@ export default function Weather() {
       <h1>Weather App</h1>;
     <form onSubmit={handleSubmit}>
       <div className="row">
-      <div className="col-9">
+        <div className="col-9">
         <input
           type="search"
+          className="w-100"
           placeholder="Enter a city..."
+          autoFocus="on"
           onChange={updateCity}
-        ></input>
-        </div>
+        ></input></div>
         <div className="col-3">
-        <input  type="submit" className="btn btn-primary"  value="Search"></input>
+        <input  type="submit" className="btn btn-primary w-100"  value="Search"></input>
       </div>
       </div>
       </form>

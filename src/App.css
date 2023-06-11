@@ -1,8 +1,8 @@
 .App {
-  text-align: center;
   display: block;
   margin: 0 auto;
   max-width: 60%;
+  margin-bottom: 0;
 }
 
 .Footer {
