@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
+import FormattedDate from "./FormattedDate"
 
 export default function Weather() {
   let [city, setCity] = useState("");
@@ -8,6 +9,10 @@ export default function Weather() {
   let [description, setDescription] = useState("");
   let [humidity, setHumidity] = useState("");
   let [wind, setWind] = useState("");
+  let [place, setPlace] = useState("");
+  let [date, setDate] = useState("");
+  
+  
  // let [icon, setIcon] = useState("");
 
   function showForecast(response) {
@@ -15,12 +20,14 @@ export default function Weather() {
     setHumidity(response.data.main.humidity);
     setWind(Math.round(response.data.wind.speed));
     setDescription(response.data.weather[0].description);
+    setPlace(response.data.name)
+    setDate(response.data.dt*1000)
    // setIcon(response.data.weather[0].icon);
   }
 
   function handleSubmit(event) {
     event.preventDefault();
-         let apiKey = "42776befd778795724824300403642a2";
+    let apiKey = "42776befd778795724824300403642a2";
     let unit = "metric";
     let headlineURL = "https://api.openweathermap.org/data/2.5/weather?";
     let url = `${headlineURL}q=${city}&appid=${apiKey}&units=${unit}`;
@@ -33,7 +40,7 @@ export default function Weather() {
 
   return (
     <div className="Weather">
-      <h1>Weather App</h1>;
+      <h1>Weather App</h1>
     <form onSubmit={handleSubmit}>
       <div className="row">
         <div className="col-9">
@@ -52,7 +59,8 @@ export default function Weather() {
       <div className="row">
         <div className="col-6">
           <ul>
-          <h2>London {temp} ºC</h2></ul>
+          <li><h2>{place} {temp} ºC</h2></li>
+          <li><FormattedDate date={date} /></li></ul>
         </div>
       <div className="List col-6">
         <ul>
